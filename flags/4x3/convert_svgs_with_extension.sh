@@ -26,7 +26,7 @@ find . -type f -name "*.svg" | while read -r file; do
     final_output="${file%.svg}.$output_ext"
 
     # Convert the SVG to PNG using Inkscape
-    inkscape -z -w 21 -h 16 "$file" -e "$temp_output"
+    inkscape -z -w 21 -h 14 "$file" -e "$temp_output"
 
     # If the output extension is jpg, convert the PNG to JPG
     if [ "$output_ext" == "jpg" ]; then
